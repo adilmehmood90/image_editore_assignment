@@ -1,0 +1,179 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #eee;
+}
+
+.container{
+    width: 850px;
+    background-color: #111;
+    border-radius: 15px;
+    box-shadow: 0 0 15px 5px rgb(0, 0, 0, 0.5);
+    padding: 30px;
+
+}
+
+h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+}
+
+.panel{
+    display: flex;
+    gap: 10px;
+    margin: 20px 0px;
+}
+
+.editing-panel{
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.filter-area{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-area .titel{
+    font-size: 14px;
+}
+
+.filter-area .filter-btns{
+    display: flex   ;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 5px;
+    
+}
+
+.filter-area button{
+    width: calc(100% /2 - 5px);
+    padding: 10px 0;
+    background: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-area button:hover, 
+.filter-area button.active {
+background: rgb(50, 88, 255);
+}
+
+.slider-area{
+ display: flex;
+ flex-direction: column;
+ gap: 5px; 
+ margin: 30px 0px;  
+}
+
+.slider-info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.slider input {
+width: 100%;
+height: 5px;
+accent-color: rgb(50, 88, 255) ;
+}
+
+.rotate-btns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rotate-btns button{
+
+    background: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 8px 12px;
+
+}
+
+.rotate-btns button:hover{
+    background: rgb(50, 88, 255);
+}
+
+
+
+
+
+
+.preview-img{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 5px;
+border: 1px solid #eee;
+overflow: hidden;
+
+}
+
+.preview-img img{
+    max-width: 580px;
+    max-height: 390px;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+
+.main-btns{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main-btns button{
+     background: transparent;
+    border: 1px solid #eee;
+    color: #eee;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 8px 12px;
+}
+
+.main-btns button:hover{
+     background: rgb(50, 88, 255);
+}
+
+button#save{
+    background: rgb(50, 88, 255);
+}
+
+button#save:hover{
+    filter: brightness(120%);
+}
+
+.disable :where(.editing-panel , #reset, #save){
+    pointer-events: none;
+    opacity: 0.5;
+}

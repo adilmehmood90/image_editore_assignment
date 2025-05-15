@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+</head>
+<body>
+
+    <div class="container disable">
+        <h2>Image Editor</h2> 
+        <br>
+        <h5>Create By Adil Mehmood</h5>
+        <div class="panel">
+            <div class="editing-panel">
+                <div class="filter-area">
+                    <div class="titel">Filters</div>
+                    <div class="filter-btns">
+                        <button id="brightness" class="active">Brightness</button>
+                        <button id="saturate">Saturate</button>
+                        <button id="invert">Invert</button>
+                        <button id="grayscale">Grayscale</button>
+                        <button id="opacity">Opacity</button>
+                        <button id="contrast">Contrast</button>
+                        <button id="hue-rotate">Hue</button>
+                        <button id="blur">Blur</button>
+                                                
+                    </div>
+                </div>
+                <div class="slider-area">
+                    <div class="slider-info">
+                        <div class="slider-name">Brightness</div>
+                        <div class="slider-value">100%</div>
+                    </div>
+                    <div class="slider">
+                        <input type="range">
+                    </div>
+                </div>
+                <div class="rotate-btns">
+                    <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                    <button id="hori"><i class="fa-solid fa-camera-rotate"></i></i> </button>
+                    <button id="verti"><i class="fa-solid fa-camera-rotate"></i></i></button>
+                </div>
+
+            </div>
+            <div class="preview-img">
+                <img src="default-image.svg.png" alt="">
+            </div>
+
+        </div>
+        <div class="main-btns">
+            <div class="reset">
+                <button id="reset">Reset</button>
+            </div>
+            <div class="other-btns">
+                <input type="file" id="input-file" accept="image/*" hidden>
+                <button id="choose">Choose</button>
+                <button id="save">Save Image</button>
+            </div>
+
+        </div>
+        
+    </div>
+ 
+</body>
+<script src="app.js"></script>
+</html>
